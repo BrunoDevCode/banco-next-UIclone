@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: 40,
     flexDirection: 'row',
-    position: 'relative'
+    position: 'relative',
   },
 
   headerLogOut: {
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     paddingRight: 24,
     paddingTop: 4,
+    fontWeight: "bold",
   },
 
   imageContainer: {

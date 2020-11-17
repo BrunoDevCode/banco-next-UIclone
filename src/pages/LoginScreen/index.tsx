@@ -6,7 +6,7 @@ import styles from './style';
 
 import unsplashSource from '../../assets/unsplashImage.png';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [stateOfEye, setStateOfEye] = useState('eye-slash');
   const [passVisibility, setPassVisibility] = useState(true);
 
@@ -17,6 +17,10 @@ export default function LoginScreen() {
   function handleChangePassVisibility() {
     stateOfEye === 'eye-slash' ? setStateOfEye('eye') : setStateOfEye('eye-slash');
     passVisibility === true ? setPassVisibility(false) : setPassVisibility(true);
+  }
+
+  async function handleMakeLogin() {
+    navigation.push('Launchpage')
   }
 
   return (
@@ -53,7 +57,7 @@ export default function LoginScreen() {
       </View>
 
       <View>
-        <TouchableOpacity style={styles.loginButtonContainer}>
+        <TouchableOpacity style={styles.loginButtonContainer} onPress={handleMakeLogin}>
           <Text style={styles.loginButton}>Entrar</Text>
         </TouchableOpacity>
       </View>
